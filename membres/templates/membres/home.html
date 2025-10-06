@@ -2,34 +2,166 @@
 {% load static %}
 
 {% block content %}
-<div>
-    <h6 class="text-center card-body p-5">
-        <i class="fas fa-edit"></i>{{nbr_memebre}}
-    </h6>
-</div>
+<section>
+<div class="py-5">
+        <div class="row primary">
+            <div class="col-12 col-lg-11 col-md-11 mx-auto">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
 
-<div class="table-responsive-sm">
-<table class="table table-striped table-hover table-bordered  align-middle table-sm table-dark table-responsive-sm table-danger">
-    <thead class="table-dark">
-    <tr>
-        <th>Nom</th>
-        <th>Postnom</th>
-        <th>Prenom</th>
-        <th>Sexe</th>
-        <th>Contact</th>
-    </tr>
-    </thead>
-    <tbody>
-        {% for item in membres %}
-        <tr>
-            <td>{{item.nom}}</td>
-            <td>{{item.postnom}}</td>
-            <td>{{item.prenom}}</td>
-            <td>{{item.sexe}}</td>
-            <td>{{item.contact}}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-</div>
+                    <div class="carousel-item active">
+                        <a href="#" class="">
+                            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/images/pub22.jpg' %}" alt=" affiche_special "/>
+                        </a>                                        
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <a href="#" class="">
+                            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/images/pub22.jpg' %}" alt="affiche_special"/>
+                        </a>                                        
+                    </div>
+                </div>
+
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </button>
+            </div>
+            </div>
+        </div><br>
+         
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3">
+                            <a href="#" class="nav-link">
+                            <div class="stat-card text-center p-4 bg-white rounded shadow-sm">
+                                <i class="bi bi-people-fill text-primary display-4 mb-3"></i>
+                                <h3 class="fw-bold text-primary" id="membres-count">1,247</h3>
+                                <p class="text-muted mb-0">Audios</p>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <a href="#" class="nav-link">
+                            <div class="stat-card text-center p-4 bg-white rounded shadow-sm">
+                                <i class="bi bi-calendar-event-fill text-success display-4 mb-3"></i>
+                                <h3 class="fw-bold text-success" id="events-count">24</h3>
+                                <p class="text-muted mb-0">Programmes</p>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <a href="#" class="nav-link">
+                            <div class="stat-card text-center p-4 bg-white rounded shadow-sm">
+                                <i class="bi bi-play-circle-fill text-danger display-4 mb-3"></i>
+                                <h3 class="fw-bold text-danger" id="videos-count">156</h3>
+                                <p class="text-muted mb-0">Vidéos</p>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <a href="#" class="nav-link">
+                            <div class="stat-card text-center p-4 bg-white rounded shadow-sm">
+                                <i class="bi bi-briefcase-fill text-warning display-4 mb-3"></i>
+                                <h3 class="fw-bold text-warning" id="departments-count">8</h3>
+                                <p class="text-muted mb-0">Livres</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <h4 class="text-start mb-2 fw-bold">Qui sommes nous ?</h2>
+        <div class="row g-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, beatae. Odio, explicabo sapiente. Facilis voluptates molestias cum in a officia porro! Consequatur animi quia excepturi necessitatibus, aliquam iusto error natus.</p>
+        </div>
+  </div>  
+  <br>      
+</section>
+<!-- end apropos -->
+
+<section>
+    <div class="container">
+        <h4 class="text-start mb-2 fw-bold">Nos programmes</h4>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="{% static 'assets/images/pub22.jpg' %}" alt="" class="card-img-top img-fluid img ws-50">
+                    <i class="bi bi-calendar-week text-primary display-5 mb-3"></i>
+                    <h5 class="">Programme Hebdomadaire</h5>
+                    <p class="text-muted mb-3">Consultez les activités et événements de la semaine</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="{% static 'assets/images/pub22.jpg' %}" alt="" class="card-img-top img-fluid img ws-50">
+                    <i class="bi bi-calendar-week text-primary display-5 mb-3"></i>
+                    <h5 class="">Programme Hebdomadaire</h5>
+                    <p class="text-muted mb-3">Consultez les activités et événements de la semaine</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="{% static 'assets/images/pub22.jpg' %}" alt="" class="card-img-top img-fluid img ws-50">
+                    <i class="bi bi-calendar-week text-primary display-5 mb-3"></i>
+                    <h5 class="">Programme Hebdomadaire</h5>
+                    <p class="text-muted mb-3">Consultez les activités et événements de la semaine</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="btn bg-gradient-light text-center">
+            Voir tous nos Programmes <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+    </div>
+    <br>
+</section>
+
+<section>
+    <div class="container">
+        <h4 class="text-start mb-2 fw-bold">Rejoignez Nous</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="action-card h-100 p-4 bg-white rounded shadow-sm border-start border-primary border-4">
+                    <i class="bi bi-calendar-week text-primary display-5 mb-3"></i>
+                    <h5 class="fw-bold">Programme Hebdomadaire</h5>
+                    <p class="text-muted mb-3">Consultez les activités et événements de la semaine</p>
+                    <button class="btn bg-gradient-light" data-page="programme">
+                        Voir le Programme <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="action-card h-100 p-4 bg-white rounded shadow-sm border-start border-primary border-4">
+                    <i class="bi bi-whatsapp text-primary display-5 mb-3"></i>
+                    <h5 class="fw-bold">Groupe WhatsApp</h5>
+                    <p class="text-muted mb-3">Rejoignez notre communauté en ligne</p>
+                    <button class="btn bg-gradient-light" data-page="whatsapp">
+                        Rejoindre <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="action-card h-100 p-4 bg-white rounded shadow-sm border-start border-primary border-4">
+                    <i class="bi bi-play-circle text-primary display-5 mb-3"></i>
+                    <h5 class="fw-bold">Vidéos de Prédication</h5>
+                    <p class="text-muted mb-3">Regardez les dernières prédications</p>
+                    <button class="btn bg-gradient-light" data-page="videos">
+                        Regarder <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+<!-- end contact -->
 {% endblock %}

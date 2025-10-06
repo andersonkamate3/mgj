@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-header bg-gradient-secondary text-white py-4">
+    <div class="container py-4 mt-5">
+        <div class="row align-items-center">
+            <div class="col-lg-8" data-aos="fade-right">
+                <h1 class="display-5 fw-bold mb-4">Contactez-<span class="text-titre">Nous</span></h1>
+                <p class="lead fs-4">Prêt à démarrer votre prochain projet ? Parlons-en ensemble et découvrons comment nous pouvons vous accompagner</p>
+            </div>
+            <div class="col-lg-4" data-aos="fade-left">
+                <div class="text-lg-end">
+                    <i class="fas fa-envelope display-1 text-white opacity-25"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <a href="{% url 'membres:export_excel' %}" class="btn bg-gradient-light text-center">Exporter Membres</a>
+    </div>
+<div>
+    <h6 class="text-center card-body p-5">
+        <i class="fas fa-box"></i>{{nbr_memebre}}
+    </h6>
+    {% if compteur > 0 %}
+    <h6 class="text-center text-danger font-600">
+        <i></i> {{compteur}} contacct mis a jour avec success
+    </h6>
+    {% endif %}
+    
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-lg-10 col-md-10 col-10 mx-auto">
+
+
+<div class="table-responsive-sm">
+<table class="table table-striped table-hover table-bordered  align-middle table-sm table-dark table-responsive-sm table-danger">
+    <thead class="table-dark">
+    <tr>
+        <th>Nom</th>
+        <th>Postnom</th>
+        <th>Prenom</th>
+        <th>Sexe</th>
+        <th>Contact</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for item in membres %}
+        <tr>
+            <td>{{item.nom}}</td>
+            <td>{{item.postnom}}</td>
+            <td>{{item.prenom}}</td>
+            <td>{{item.sexe}}</td>
+            <td>{{item.contact}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+    </div>
+
+    </div>
+</div>
+</section>
+{% endblock %}

@@ -21,6 +21,8 @@ class Membres(models.Model):
     quartier = models.CharField(max_length=100, blank=True, null=True)
     avenue = models.CharField(max_length=100, blank=True, null=True)
     numero = models.IntegerField()
+    photo = models.FileField(upload_to='photos/', blank=True, null=True)
+    create = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
         return f"{self.nom} {self.prenom}"
