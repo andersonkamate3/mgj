@@ -12,14 +12,14 @@ env = environ.Env(
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Clé secrète
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY ='django-insecure-jc3e$oh5&he!+sptq#6(qa3tw89i6j%@fn9i#ip*avmucm-292'
 
 
 # Debug (toujours False en production)
-DEBUG = env.bool("DEBUG", default=False)
+DEBUG = True
 
 # Hôtes autorisés
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["127.0.0.1", "localhost"])
+ALLOWED_HOSTS = ['*']
 
 # Applications
 INSTALLED_APPS = [

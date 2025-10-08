@@ -4,7 +4,6 @@ from infomgj.models import Ministeres
 from .models import Membres
 import pandas as pd
 import openpyxl
-
 import os
 
 
